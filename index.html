@@ -54,6 +54,43 @@
         .fade-in {
             animation: fadeIn 0.6s ease-in;
         }
+
+        .logo-emboss {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 4.25rem;
+            height: 4.25rem;
+            border-radius: 9999px;
+            border: 1px solid rgba(148, 163, 184, 0.45);
+            background: radial-gradient(circle at 30% 30%, rgba(255, 255, 255, 0.16), rgba(15, 23, 42, 0.65));
+            box-shadow: inset 0 2px 8px rgba(255, 255, 255, 0.2), inset 0 -6px 12px rgba(2, 6, 23, 0.55), 0 6px 14px rgba(2, 6, 23, 0.4);
+            overflow: hidden;
+            flex-shrink: 0;
+        }
+
+        .logo-emboss svg,
+        .logo-emboss img {
+            width: 2.7rem;
+            height: 2.7rem;
+            object-fit: contain;
+        }
+
+        .logo-emboss.gt img {
+            width: 3.8rem;
+            height: 3.8rem;
+            border-radius: 9999px;
+        }
+
+        .entry-text-indent {
+            padding-left: 5.25rem;
+        }
+
+        @media (max-width: 640px) {
+            .entry-text-indent {
+                padding-left: 0;
+            }
+        }
         
         @keyframes fadeIn {
             from {
@@ -149,134 +186,162 @@
             <!-- Current Role -->
             <div class="card-hover mb-8 p-8 bg-slate-700 bg-opacity-50 border border-slate-600 rounded-lg">
                 <div class="flex flex-col md:flex-row md:justify-between md:items-start gap-4 mb-4">
-                    <div>
-                        <h3 class="text-2xl font-bold text-white">Product Manager II, HPC & AI</h3>
-                        <p class="text-blue-400 text-lg">Microsoft</p>
+                    <div class="flex items-start gap-4">
+                        <span class="logo-emboss" aria-hidden="true">
+                            <img src="microsoft_logo.png" alt="" loading="lazy">
+                        </span>
+                        <div>
+                            <h3 class="text-2xl font-bold text-white">Product Manager II, HPC & AI</h3>
+                            <p class="text-blue-400 text-lg">Microsoft</p>
+                        </div>
                     </div>
                     <span class="text-gray-400 text-sm whitespace-nowrap">October 2025 – Present</span>
                 </div>
-                <p class="text-gray-300 mb-4">Redmond, WA</p>
-                <ul class="space-y-2 text-gray-300">
-                    <li class="flex items-start gap-3">
-                        <span class="text-blue-400 mt-1">▸</span>
-                        <span>Own the AI Hardware Capacity Planning for Microsoft's contracted OpenAI Training supercomputer demand by coordinating and aligning with engineering, legal, SOX compliance, business development, finance, and supply chain teams</span>
-                    </li>
-                    <li class="flex items-start gap-3">
-                        <span class="text-blue-400 mt-1">▸</span>
-                        <span>Manage the handoff/delivery process of +$1B worth of GPUs, Storage, CPUs, and HPC CPUs for contracted supercomputer training demand by actively mitigating roadblocks to on-time delivery</span>
-                    </li>
-                    <li class="flex items-start gap-3">
-                        <span class="text-blue-400 mt-1">▸</span>
-                        <span>Ensure all processes and communications between Microsoft and the customer are documented for future audits and SOX compliant</span>
-                    </li>
-                    <li class="flex items-start gap-3">
-                        <span class="text-blue-400 mt-1">▸</span>
-                        <span>Report out forecasts and delivery status of hardware consumed in executive forums all the way up to the CFO</span>
-                    </li>
-                    <li class="flex items-start gap-3">
-                        <span class="text-blue-400 mt-1">▸</span>
-                        <span>Form and lead regular rhythm of business by gathering engineering teams' inputs to centralize all GPU SKU assumptions (kW/rack, performance, lead times, SLA%, etc.) used across Microsoft in capacity planning and contracting</span>
-                    </li>
-                    <li class="flex items-start gap-3">
-                        <span class="text-blue-400 mt-1">▸</span>
-                        <span>Build and maintain an AI agent that assists with customer help requests for operating and scaling on Azure hardware as well as documenting all issues in a wiki</span>
-                    </li>
-                </ul>
+                <div class="entry-text-indent">
+                    <p class="text-gray-300 mb-4">Redmond, WA</p>
+                    <ul class="space-y-2 text-gray-300">
+                        <li class="flex items-start gap-3">
+                            <span class="text-blue-400 mt-1">▸</span>
+                            <span>Own the AI Hardware Capacity Planning for Microsoft's contracted OpenAI Training supercomputer demand by coordinating and aligning with engineering, legal, SOX compliance, business development, finance, and supply chain teams</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="text-blue-400 mt-1">▸</span>
+                            <span>Manage the handoff/delivery process of +$1B worth of GPUs, Storage, CPUs, and HPC CPUs for contracted supercomputer training demand by actively mitigating roadblocks to on-time delivery</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="text-blue-400 mt-1">▸</span>
+                            <span>Ensure all processes and communications between Microsoft and the customer are documented for future audits and SOX compliant</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="text-blue-400 mt-1">▸</span>
+                            <span>Report out forecasts and delivery status of hardware consumed in executive forums all the way up to the CFO</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="text-blue-400 mt-1">▸</span>
+                            <span>Form and lead regular rhythm of business by gathering engineering teams' inputs to centralize all GPU SKU assumptions (kW/rack, performance, lead times, SLA%, etc.) used across Microsoft in capacity planning and contracting</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="text-blue-400 mt-1">▸</span>
+                            <span>Build and maintain an AI agent that assists with customer help requests for operating and scaling on Azure hardware as well as documenting all issues in a wiki</span>
+                        </li>
+                    </ul>
+                </div>
             </div>
 
             <!-- Previous Role 1 -->
             <div class="card-hover mb-8 p-8 bg-slate-700 bg-opacity-50 border border-slate-600 rounded-lg">
                 <div class="flex flex-col md:flex-row md:justify-between md:items-start gap-4 mb-2">
-                    <div>
-                        <h3 class="text-2xl font-bold text-white">Hardware Product Manager II, SPARC</h3>
-                        <p class="text-blue-400 text-lg">Microsoft</p>
+                    <div class="flex items-start gap-4">
+                        <span class="logo-emboss" aria-hidden="true">
+                            <img src="microsoft_logo.png" alt="" loading="lazy">
+                        </span>
+                        <div>
+                            <h3 class="text-2xl font-bold text-white">Hardware Product Manager II, SPARC</h3>
+                            <p class="text-blue-400 text-lg">Microsoft</p>
+                        </div>
                     </div>
                     <span class="text-gray-400 text-sm whitespace-nowrap">March 2025 – October 2025</span>
                 </div>
-                <p class="text-gray-300 mb-4">Redmond, WA</p>
-                <p class="text-gray-400 text-sm mb-4">Hardware Program Manager, SPARC (August 2023 – March 2025)</p>
-                <ul class="space-y-2 text-gray-300">
-                    <li class="flex items-start gap-3">
-                        <span class="text-blue-400 mt-1">▸</span>
-                        <span>Identified $1B+ cost savings through Total Cost of Ownership (TCO) model analysis and scenario modelling at the datacenter level in collaboration with Engineering, Finance, Sourcing, and Capacity Planning for planning server hardware future Azure SKUs</span>
-                    </li>
-                    <li class="flex items-start gap-3">
-                        <span class="text-blue-400 mt-1">▸</span>
-                        <span>Leveraged competitive intelligence to model past, current, and future looking competitive SKU views (TCO and performance projections) to assist the planning team to build market competitive Azure SKUs (General Purpose Compute, Storage, HPC)</span>
-                    </li>
-                    <li class="flex items-start gap-3">
-                        <span class="text-blue-400 mt-1">▸</span>
-                        <span>Delivered market competition report outs to executive level to guide investments in competitive deltas</span>
-                    </li>
-                    <li class="flex items-start gap-3">
-                        <span class="text-blue-400 mt-1">▸</span>
-                        <span>Spearheaded business assessment/viability of new server and datacenter advancements (liquid cooling, storage disaggregation, etc.)</span>
-                    </li>
-                    <li class="flex items-start gap-3">
-                        <span class="text-blue-400 mt-1">▸</span>
-                        <span>Led rhythm of business to centralize all datacenter component performance, cost, and power estimates used by the org's 100+ engineers and PMs for modeling views</span>
-                    </li>
-                    <li class="flex items-start gap-3">
-                        <span class="text-blue-400 mt-1">▸</span>
-                        <span>Assisted in gathering customer requirements and analysis to drive Cobalt 100/200 ARM adoption for over 10+ internal customers</span>
-                    </li>
-                    <li class="flex items-start gap-3">
-                        <span class="text-blue-400 mt-1">▸</span>
-                        <span>Analyzed LLM Usage data (FLOPS, Tokens) for M365 to support which hardware metrics to optimize for by mining M365's LLM usage dataset with Kusto</span>
-                    </li>
-                </ul>
+                <div class="entry-text-indent">
+                    <p class="text-gray-300 mb-4">Redmond, WA</p>
+                    <p class="text-gray-400 text-sm mb-4">Hardware Program Manager, SPARC (August 2023 – March 2025)</p>
+                    <ul class="space-y-2 text-gray-300">
+                        <li class="flex items-start gap-3">
+                            <span class="text-blue-400 mt-1">▸</span>
+                            <span>Identified $1B+ cost savings through Total Cost of Ownership (TCO) model analysis and scenario modelling at the datacenter level in collaboration with Engineering, Finance, Sourcing, and Capacity Planning for planning server hardware future Azure SKUs</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="text-blue-400 mt-1">▸</span>
+                            <span>Leveraged competitive intelligence to model past, current, and future looking competitive SKU views (TCO and performance projections) to assist the planning team to build market competitive Azure SKUs (General Purpose Compute, Storage, HPC)</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="text-blue-400 mt-1">▸</span>
+                            <span>Delivered market competition report outs to executive level to guide investments in competitive deltas</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="text-blue-400 mt-1">▸</span>
+                            <span>Spearheaded business assessment/viability of new server and datacenter advancements (liquid cooling, storage disaggregation, etc.)</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="text-blue-400 mt-1">▸</span>
+                            <span>Led rhythm of business to centralize all datacenter component performance, cost, and power estimates used by the org's 100+ engineers and PMs for modeling views</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="text-blue-400 mt-1">▸</span>
+                            <span>Assisted in gathering customer requirements and analysis to drive Cobalt 100/200 ARM adoption for over 10+ internal customers</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="text-blue-400 mt-1">▸</span>
+                            <span>Analyzed LLM Usage data (FLOPS, Tokens) for M365 to support which hardware metrics to optimize for by mining M365's LLM usage dataset with Kusto</span>
+                        </li>
+                    </ul>
+                </div>
             </div>
 
             <!-- Previous Role 2 -->
             <div class="card-hover mb-8 p-8 bg-slate-700 bg-opacity-50 border border-slate-600 rounded-lg">
                 <div class="flex flex-col md:flex-row md:justify-between md:items-start gap-4 mb-4">
-                    <div>
-                        <h3 class="text-2xl font-bold text-white">Hardware Program Management Intern, SPARC</h3>
-                        <p class="text-blue-400 text-lg">Microsoft</p>
+                    <div class="flex items-start gap-4">
+                        <span class="logo-emboss" aria-hidden="true">
+                            <img src="microsoft_logo.png" alt="" loading="lazy">
+                        </span>
+                        <div>
+                            <h3 class="text-2xl font-bold text-white">Hardware Program Management Intern, SPARC</h3>
+                            <p class="text-blue-400 text-lg">Microsoft</p>
+                        </div>
                     </div>
                     <span class="text-gray-400 text-sm whitespace-nowrap">May 2022 – August 2022</span>
                 </div>
-                <p class="text-gray-300 mb-4">Redmond, WA</p>
-                <ul class="space-y-2 text-gray-300">
-                    <li class="flex items-start gap-3">
-                        <span class="text-blue-400 mt-1">▸</span>
-                        <span>Led a program to define and develop an Azure DevOps tool to allow the organization to communicate spec requirements with external vendors and internal customers</span>
-                    </li>
-                    <li class="flex items-start gap-3">
-                        <span class="text-blue-400 mt-1">▸</span>
-                        <span>Built a competitive analysis model based on historical trends that compared competitors' cloud instance offerings, predicted their growth in key metrics, and highlighted areas of focus for Azure's future instances</span>
-                    </li>
-                </ul>
+                <div class="entry-text-indent">
+                    <p class="text-gray-300 mb-4">Redmond, WA</p>
+                    <ul class="space-y-2 text-gray-300">
+                        <li class="flex items-start gap-3">
+                            <span class="text-blue-400 mt-1">▸</span>
+                            <span>Led a program to define and develop an Azure DevOps tool to allow the organization to communicate spec requirements with external vendors and internal customers</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="text-blue-400 mt-1">▸</span>
+                            <span>Built a competitive analysis model based on historical trends that compared competitors' cloud instance offerings, predicted their growth in key metrics, and highlighted areas of focus for Azure's future instances</span>
+                        </li>
+                    </ul>
+                </div>
             </div>
 
             <!-- Previous Role 3 -->
             <div class="card-hover p-8 bg-slate-700 bg-opacity-50 border border-slate-600 rounded-lg">
                 <div class="flex flex-col md:flex-row md:justify-between md:items-start gap-4 mb-4">
-                    <div>
-                        <h3 class="text-2xl font-bold text-white">Global Supply Management Intern, Castings and Plastics CapEx</h3>
-                        <p class="text-blue-400 text-lg">Tesla Motors, Inc.</p>
+                    <div class="flex items-start gap-4">
+                        <span class="logo-emboss" aria-hidden="true">
+                            <img src="tesla_logo_PNG19.png" alt="" loading="lazy">
+                        </span>
+                        <div>
+                            <h3 class="text-2xl font-bold text-white">Global Supply Management Intern, Castings and Plastics CapEx</h3>
+                            <p class="text-blue-400 text-lg">Tesla Motors, Inc.</p>
+                        </div>
                     </div>
                     <span class="text-gray-400 text-sm whitespace-nowrap">August 2021 – December 2021</span>
                 </div>
-                <p class="text-gray-300 mb-4">Fremont, California (Remote)</p>
-                <ul class="space-y-2 text-gray-300">
-                    <li class="flex items-start gap-3">
-                        <span class="text-blue-400 mt-1">▸</span>
-                        <span>Collaborated with 30+ member cross-functional teams (global supply managers, engineers, legal, and PMs) on 10+ projects for quotes and integration into factories</span>
-                    </li>
-                    <li class="flex items-start gap-3">
-                        <span class="text-blue-400 mt-1">▸</span>
-                        <span>Managed 15+ global suppliers' RFQs, contract terms, planning stages, and invoice approvals</span>
-                    </li>
-                    <li class="flex items-start gap-3">
-                        <span class="text-blue-400 mt-1">▸</span>
-                        <span>Negotiated with suppliers for 10+ quotes for CapEx castings and plastics equipment and prototype parts to realize $1M in savings</span>
-                    </li>
-                    <li class="flex items-start gap-3">
-                        <span class="text-blue-400 mt-1">▸</span>
-                        <span>Ran 5+ commercial reviews to justify which supplier to award project contracts to</span>
-                    </li>
-                </ul>
+                <div class="entry-text-indent">
+                    <p class="text-gray-300 mb-4">Fremont, California (Remote)</p>
+                    <ul class="space-y-2 text-gray-300">
+                        <li class="flex items-start gap-3">
+                            <span class="text-blue-400 mt-1">▸</span>
+                            <span>Collaborated with 30+ member cross-functional teams (global supply managers, engineers, legal, and PMs) on 10+ projects for quotes and integration into factories</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="text-blue-400 mt-1">▸</span>
+                            <span>Managed 15+ global suppliers' RFQs, contract terms, planning stages, and invoice approvals</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="text-blue-400 mt-1">▸</span>
+                            <span>Negotiated with suppliers for 10+ quotes for CapEx castings and plastics equipment and prototype parts to realize $1M in savings</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="text-blue-400 mt-1">▸</span>
+                            <span>Ran 5+ commercial reviews to justify which supplier to award project contracts to</span>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </div>
     </section>
@@ -290,13 +355,15 @@
                 <!-- Masters -->
                 <div class="card-hover p-8 bg-slate-700 bg-opacity-50 border border-slate-600 rounded-lg">
                     <div class="flex items-start gap-4 mb-4">
-                        <div class="text-3xl">🎓</div>
+                        <span class="logo-emboss gt" aria-hidden="true">
+                            <img src="GT_Logo.png" alt="" loading="lazy">
+                        </span>
                         <div>
                             <h3 class="text-2xl font-bold text-white">MS Mechanical Engineering</h3>
                             <p class="text-blue-400">Georgia Tech</p>
                         </div>
                     </div>
-                    <div class="space-y-2 text-gray-300">
+                    <div class="space-y-2 text-gray-300 entry-text-indent">
                         <p>GPA: <span class="text-white font-semibold">4.0</span></p>
                         <p>Graduated: <span class="text-white font-semibold">May 2023</span></p>
                         <p class="text-sm">Concentration: Design & Product Management</p>
@@ -306,13 +373,15 @@
                 <!-- Bachelors -->
                 <div class="card-hover p-8 bg-slate-700 bg-opacity-50 border border-slate-600 rounded-lg">
                     <div class="flex items-start gap-4 mb-4">
-                        <div class="text-3xl">🎓</div>
+                        <span class="logo-emboss gt" aria-hidden="true">
+                            <img src="GT_Logo.png" alt="" loading="lazy">
+                        </span>
                         <div>
                             <h3 class="text-2xl font-bold text-white">BS Mechanical Engineering</h3>
                             <p class="text-blue-400">Georgia Tech</p>
                         </div>
                     </div>
-                    <div class="space-y-2 text-gray-300">
+                    <div class="space-y-2 text-gray-300 entry-text-indent">
                         <p>GPA: <span class="text-white font-semibold">3.89</span></p>
                         <p>Graduated: <span class="text-white font-semibold">May 2022</span></p>
                         <p class="text-sm">Certificate: Operations & Supply Chain</p>
