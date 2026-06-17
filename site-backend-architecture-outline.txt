@@ -1,0 +1,125 @@
+Derrick AI Portfolio - Backend and Build Process Architecture
+
+Document Purpose
+This document outlines the practical "backend" and operational architecture behind this portfolio site, even though the deployed site itself is static HTML/CSS/JS. It explains how content and interactions are structured, how navigation and project deep dives are wired, and what repeatable implementation workflow was used.
+
+1) Architecture Summary
+- Site type: Static multi-page portfolio.
+- Rendering model: Browser-rendered HTML with utility-first styling via Tailwind CDN.
+- Data model: Content embedded directly in HTML templates (no external database).
+- Routing model: Relative file-based navigation.
+- Deployment model: Static hosting compatible (GitHub Pages, Netlify, Vercel static mode, S3 static site, etc.).
+
+Why this matters
+- Minimal operational overhead.
+- Fast load times.
+- Simple source control workflow.
+- Easy to iterate with low risk.
+
+2) Project Structure
+- Root page: index.html
+- Deep-dive project pages:
+  - projects/azure-hardware-ai-agent.html
+  - projects/personal-portfolio-site.html
+- Static assets:
+  - microsoft_logo.png
+  - tesla_logo_PNG19.png
+  - GT_Logo.png
+  - strava.svg
+  - Derrick_Mu_Resume.pdf
+
+Practical implications
+- Every page is independently loadable.
+- Relative linking keeps portability across static hosts.
+- No build step required for local preview.
+
+3) Runtime "Backend" Behavior in Browser
+3.1 Navigation layer
+- Top nav anchors route to section IDs on index.html (e.g., #experience, #projects).
+- Mobile menu toggles using lightweight vanilla JavaScript.
+- Smooth scrolling uses CSS scroll-behavior and anchor links.
+
+3.2 Content layer
+- Experience, education, skills, contact, and projects are section modules.
+- Project cards route to dedicated deep-dive pages rather than in-page expansion.
+- Deep-dive pages include back-links to index.html#projects.
+
+3.3 Interaction layer
+- Card hover behavior implemented through reusable CSS classes:
+  - base: card-hover
+  - stronger interaction variants: experience-card, connect-card, project-card
+- Interaction states combine:
+  - lift via transform translate3d
+  - subtle scale
+  - shadow increase
+  - border highlight
+  - background tint shift
+
+4) Styling and UI System
+- Styling stack: Tailwind CSS via CDN + custom CSS block in each page.
+- UI pattern: Card-based layout with consistent spacing rhythm.
+- Responsive strategy:
+  - utility classes for breakpoints
+  - mobile menu for compact nav
+  - grid-based card layouts
+
+Consistency controls used
+- Shared visual language: slate-based dark gradient background and accent colors.
+- Repeated interaction rules for primary cards.
+- Reusable icon treatment for company and social/contact markers.
+
+5) Content Operations (No Database)
+Because there is no API/database, "backend operations" are content-file operations:
+- Update text directly in HTML sections.
+- Add new projects by:
+  1. creating a new project deep-dive HTML page under projects/
+  2. adding a project card in index.html with relative href
+  3. maintaining nav/section order consistency
+- Update assets by replacing files in root and keeping path names stable.
+
+6) Link and Routing Contract
+The site relies on these conventions:
+- Internal section links: #section-id
+- Internal page links: projects/<slug>.html
+- Return navigation from projects pages: ../index.html#projects
+- External links use target="_blank" where appropriate.
+
+Risk controls
+- Keep filenames lowercase and hyphenated for new project pages.
+- Avoid breaking relative paths when moving files.
+- Keep one source-of-truth URL per card.
+
+7) Development Workflow (Repeatable)
+Step 1: Inspect current markup and class system.
+Step 2: Apply minimal targeted HTML/CSS edits.
+Step 3: Preserve existing visual language and responsive behavior.
+Step 4: Verify key selectors/links after each change.
+Step 5: Add new pages only when interaction requires route changes.
+
+Quality checks used
+- Confirm href targets exist.
+- Confirm classes are attached where expected.
+- Confirm section ordering and nav anchors.
+- Confirm icon/assets paths resolve.
+
+8) Security and Privacy Notes
+- No server-side code and no dynamic user input processing.
+- No credential handling in frontend code.
+- No cookies/session/auth flows implemented.
+- Third-party dependency is Tailwind CDN at runtime.
+
+9) Scaling Path If Upgrading to Dynamic Backend
+If this portfolio later needs a true backend:
+- Phase 1: Externalize content to JSON/Markdown.
+- Phase 2: Add static-site generation (e.g., Next.js, Astro, Eleventy).
+- Phase 3: Add CMS/API for project entries and blog content.
+- Phase 4: Add analytics/events pipeline and optional contact form backend.
+
+10) Maintenance Checklist
+- Verify all nav anchors still map to existing sections.
+- Verify each project card points to a valid deep-dive page.
+- Verify resume and social links are current.
+- Keep hover/interaction classes consistent across new cards.
+- Re-run manual mobile checks after layout edits.
+
+End of Document

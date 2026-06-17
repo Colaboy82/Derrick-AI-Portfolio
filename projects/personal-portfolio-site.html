@@ -7,9 +7,6 @@
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body class="bg-gradient-to-br from-slate-950 via-slate-900 to-slate-800 text-gray-100 min-h-screen">
-    <div class="pointer-events-none fixed inset-0 z-50 flex items-center justify-center overflow-hidden">
-        <span class="select-none text-[6rem] sm:text-[9rem] md:text-[13rem] font-black uppercase tracking-[0.35em] text-white/6 rotate-[-18deg]">WIP</span>
-    </div>
     <main class="px-4 sm:px-6 lg:px-8 py-16">
         <div class="max-w-5xl mx-auto">
             <a href="../index.html#projects" class="inline-flex items-center gap-2 text-orange-300 hover:text-orange-200 transition mb-8">
@@ -18,48 +15,260 @@
             </a>
 
             <section class="mb-10 rounded-3xl border border-slate-700 bg-slate-800/60 p-8 md:p-12 shadow-2xl shadow-slate-950/40">
-                <div class="flex flex-wrap items-center gap-3 mb-6">
-                    <span class="rounded-full border border-orange-400/40 bg-orange-500/10 px-4 py-1 text-xs font-semibold uppercase tracking-[0.25em] text-orange-200">Web</span>
-                    <span class="text-sm text-gray-400">Portfolio · Storytelling · Front-End Iteration</span>
-                </div>
                 <h1 class="text-4xl md:text-5xl font-bold text-white mb-4">Personal Portfolio Site</h1>
-                <p class="text-lg md:text-xl text-gray-300 max-w-3xl leading-relaxed">A personal site designed to present work, interests, and personality in a way that feels clearer and more human than a static resume alone.</p>
+                <p class="text-lg md:text-xl text-gray-300 max-w-3xl leading-relaxed">Designed a personal portfolio site, built entirely with AI assistance and hosted on a permanent, shareable URL with zero ongoing cost and automatic redeployment for all future updates.</p>
             </section>
 
-            <section class="grid md:grid-cols-3 gap-6 mb-10">
-                <div class="rounded-2xl border border-slate-700 bg-slate-800/50 p-6">
-                    <h2 class="text-sm font-semibold uppercase tracking-[0.2em] text-orange-300 mb-3">Goal</h2>
-                    <p class="text-gray-300 leading-relaxed">Build a portfolio that makes experience easy to scan while also showing what you are currently interested in professionally and personally.</p>
-                </div>
-                <div class="rounded-2xl border border-slate-700 bg-slate-800/50 p-6">
-                    <h2 class="text-sm font-semibold uppercase tracking-[0.2em] text-orange-300 mb-3">Design Direction</h2>
-                    <p class="text-gray-300 leading-relaxed">Use a dark, modern interface with strong contrast, clean cards, smooth hover states, and a small number of focused sections.</p>
-                </div>
-                <div class="rounded-2xl border border-slate-700 bg-slate-800/50 p-6">
-                    <h2 class="text-sm font-semibold uppercase tracking-[0.2em] text-orange-300 mb-3">Why It Matters</h2>
-                    <p class="text-gray-300 leading-relaxed">The project acts as both a communication tool and a sandbox for refining how your background, projects, and interests are presented online.</p>
+            
+
+            <section class="rounded-3xl border border-slate-700 bg-slate-800/50 p-8 md:p-10 mb-10">
+                <h2 class="text-2xl font-bold text-white mb-6">Tools Used</h2>
+                <div class="overflow-x-auto">
+                    <table class="w-full text-left text-sm">
+                        <thead>
+                            <tr class="bg-slate-700/60 border border-slate-600">
+                                <th class="px-6 py-4 font-semibold text-white">Tool</th>
+                                <th class="px-6 py-4 font-semibold text-white">Role in the workflow</th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y divide-slate-600">
+                            <tr class="border-l border-r border-slate-600 hover:bg-slate-700/30 transition">
+                                <td class="px-6 py-4 font-semibold text-white">VS Code</td>
+                                <td class="px-6 py-4 text-gray-300">Code editor where the site is built and previewed</td>
+                            </tr>
+                            <tr class="border-l border-r border-slate-600 hover:bg-slate-700/30 transition">
+                                <td class="px-6 py-4 font-semibold text-white">GitHub Copilot</td>
+                                <td class="px-6 py-4 text-gray-300">AI assistant (free tier) that generates the HTML/CSS/JS from a written prompt</td>
+                            </tr>
+                            <tr class="border-l border-r border-slate-600 hover:bg-slate-700/30 transition">
+                                <td class="px-6 py-4 font-semibold text-white">Live Preview / Live Server</td>
+                                <td class="px-6 py-4 text-gray-300">VS Code extensions used to preview the site locally before publishing</td>
+                            </tr>
+                            <tr class="border-l border-r border-slate-600 hover:bg-slate-700/30 transition">
+                                <td class="px-6 py-4 font-semibold text-white">Git</td>
+                                <td class="px-6 py-4 text-gray-300">Version control tool that tracks and saves changes to the project</td>
+                            </tr>
+                            <tr class="border-l border-r border-slate-600 hover:bg-slate-700/30 transition">
+                                <td class="px-6 py-4 font-semibold text-white">GitHub</td>
+                                <td class="px-6 py-4 text-gray-300">Cloud repository that stores the code and connects to Vercel</td>
+                            </tr>
+                            <tr class="border-l border-r border-slate-600 hover:bg-slate-700/30 transition">
+                                <td class="px-6 py-4 border-b border-slate-600 font-semibold text-white">Vercel</td>
+                                <td class="px-6 py-4 border-b border-slate-600 text-gray-300">Free hosting platform that auto-deploys the site from GitHub</td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </div>
             </section>
 
             <section class="rounded-3xl border border-slate-700 bg-slate-800/50 p-8 md:p-10 mb-10">
-                <h2 class="text-2xl font-bold text-white mb-6">Deep Dive Structure</h2>
-                <div class="grid md:grid-cols-2 gap-6 text-gray-300">
+                <h2 class="text-2xl font-bold text-white mb-6">Experience Gained</h2>                
+                <div class="space-y-8">
                     <div>
-                        <h3 class="text-lg font-semibold text-white mb-2">What to document</h3>
-                        <p class="leading-relaxed">This page is a good place to explain how the layout evolved, what sections you chose to emphasize, and how you balanced professional credibility with a more personal voice.</p>
+                        <h3 class="text-lg font-semibold text-orange-300 mb-3">AI-assisted development</h3>
+                        <ul class="space-y-2 text-gray-300 pl-6">
+                            <li class="flex gap-3">
+                                <span class="text-orange-400 flex-shrink-0">•</span>
+                                <span>Writing clear, detailed prompts that translate real content (a resume) into structured, working code</span>
+                            </li>
+                            <li class="flex gap-3">
+                                <span class="text-orange-400 flex-shrink-0">•</span>
+                                <span>Iterating on AI-generated output through follow-up instructions rather than manual rewrites</span>
+                            </li>
+                            <li class="flex gap-3">
+                                <span class="text-orange-400 flex-shrink-0">•</span>
+                                <span>Reading and lightly editing generated HTML, CSS, and JavaScript to understand what the code does</span>
+                            </li>
+                        </ul>
                     </div>
+
                     <div>
-                        <h3 class="text-lg font-semibold text-white mb-2">Useful additions</h3>
-                        <p class="leading-relaxed">You can add before-and-after versions, UI rationale, accessibility considerations, responsive behavior, and notes on how the site should evolve over time.</p>
+                        <h3 class="text-lg font-semibold text-sky-300 mb-3">Version control</h3>
+                        <ul class="space-y-2 text-gray-300 pl-6">
+                            <li class="flex gap-3">
+                                <span class="text-sky-400 flex-shrink-0">•</span>
+                                <span>Core Git operations: staging, committing, and pushing changes</span>
+                            </li>
+                            <li class="flex gap-3">
+                                <span class="text-sky-400 flex-shrink-0">•</span>
+                                <span>Understanding how a local project folder stays linked to a remote GitHub repository, including recovering the initial clone and moving the folder</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <h3 class="text-lg font-semibold text-green-300 mb-3">Deployment and hosting</h3>
+                        <ul class="space-y-2 text-gray-300 pl-6">
+                            <li class="flex gap-3">
+                                <span class="text-green-400 flex-shrink-0">•</span>
+                                <span>Setting up continuous deployment, where every GitHub push automatically triggers a live update</span>
+                            </li>
+                            <li class="flex gap-3">
+                                <span class="text-green-400 flex-shrink-0">•</span>
+                                <span>Configuring a hosting platform (Vercel) end-to-end: importing a repository, deploying, and managing the live URL</span>
+                            </li>
+                            <li class="flex gap-3">
+                                <span class="text-green-400 flex-shrink-0">•</span>
+                                <span>Understanding how metadata like the HTML title tag affects how a link appears when shared</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <h3 class="text-lg font-semibold text-purple-300 mb-3">Troubleshooting</h3>
+                        <ul class="space-y-2 text-gray-300 pl-6">
+                            <li class="flex gap-3">
+                                <span class="text-purple-400 flex-shrink-0">•</span>
+                                <span>Diagnosing and fixing a broken editor-to-repository link after relocating a project folder</span>
+                            </li>
+                            <li class="flex gap-3">
+                                <span class="text-purple-400 flex-shrink-0">•</span>
+                                <span>Debugging an incorrect live preview and tracing it back to a single line of HTML</span>
+                            </li>
+                        </ul>
                     </div>
                 </div>
             </section>
 
-            <section class="rounded-3xl border border-dashed border-slate-600 bg-slate-900/40 p-8 md:p-10">
-                <h2 class="text-2xl font-bold text-white mb-4">Notes Placeholder</h2>
-                <p class="text-gray-400 leading-relaxed">This page is ready for your deeper case study. Replace this placeholder with screenshots, interaction notes, writing choices, design revisions, or anything else you want to capture about the build process.</p>
+            <section class="rounded-3xl border border-slate-700 bg-slate-800/50 p-8 md:p-10 mb-10">
+                    <h2 class="text-2xl font-bold text-white mb-6">Workflow Schema</h2>
+                    <p class="text-gray-300 mb-6 leading-relaxed">The project follows a linear continuous deployment pipeline. Each stage feeds directly into the next, and the final two stages repeat automatically for every future update.</p>
+                    <div class="overflow-x-auto">
+                        <table class="w-full text-left text-sm">
+                            <thead>
+                                <tr class="bg-slate-700/60 border border-slate-600">
+                                    <th class="px-6 py-4 font-semibold text-white">Stage</th>
+                                    <th class="px-6 py-4 font-semibold text-white">Role</th>
+                                    <th class="px-6 py-4 font-semibold text-white">Output</th>
+                                </tr>
+                            </thead>
+                            <tbody class="divide-y divide-slate-600">
+                                <tr class="border-l border-r border-slate-600 hover:bg-slate-700/30 transition">
+                                    <td class="px-6 py-4 font-semibold text-white">1. Write</td>
+                                    <td class="px-6 py-4 text-gray-300">Prompt engineer</td>
+                                    <td class="px-6 py-4 text-gray-300">index.html (HTML, CSS, JS in one file)</td>
+                                </tr>
+                                <tr class="border-l border-r border-slate-600 hover:bg-slate-700/30 transition">
+                                    <td class="px-6 py-4 font-semibold text-white">2. Preview</td>
+                                    <td class="px-6 py-4 text-gray-300">Visual reviewer</td>
+                                    <td class="px-6 py-4 text-gray-300">Local visual check before publishing</td>
+                                </tr>
+                                <tr class="border-l border-r border-slate-600 hover:bg-slate-700/30 transition">
+                                    <td class="px-6 py-4 font-semibold text-white">3. Save</td>
+                                    <td class="px-6 py-4 text-gray-300">Change committer</td>
+                                    <td class="px-6 py-4 text-gray-300">Committed snapshot of the code</td>
+                                </tr>
+                                <tr class="border-l border-r border-slate-600 hover:bg-slate-700/30 transition">
+                                    <td class="px-6 py-4 font-semibold text-white">4. Store</td>
+                                    <td class="px-6 py-4 text-gray-300">Repository manager</td>
+                                    <td class="px-6 py-4 text-gray-300">Repository accessible to Vercel</td>
+                                </tr>
+                                <tr class="border-l border-r border-slate-600 hover:bg-slate-700/30 transition">
+                                    <td class="px-6 py-4 font-semibold text-white">5. Deploy</td>
+                                    <td class="px-6 py-4 text-gray-300">Infrastructure observer</td>
+                                    <td class="px-6 py-4 text-gray-300">Live site at project-name.vercel.app</td>
+                                </tr>
+                                <tr class="border-l border-r border-slate-600 hover:bg-slate-700/30 transition">
+                                    <td class="px-6 py-4 border-b border-slate-600 font-semibold text-white">6. Update</td>
+                                    <td class="px-6 py-4 border-b border-slate-600 text-gray-300">Push initiator</td>
+                                    <td class="px-6 py-4 border-b border-slate-600 text-gray-300">Future edits auto-redeploy on every push, no manual redeploy needed</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </section>
+
+            <section class="rounded-3xl border border-slate-700 bg-slate-800/50 p-8 md:p-10 mb-10">
+                <h2 class="text-2xl font-bold text-white mb-6">Steps Taken</h2>
+                <div class="space-y-8">
+                    <div>
+                        <h3 class="text-lg font-semibold text-white mb-3">1. Set up the environment</h3>
+                        <ul class="space-y-2 text-gray-300 pl-6">
+                            <li class="flex gap-3">
+                                <span class="text-orange-400 flex-shrink-0">•</span>
+                                <span>Installed VS Code and the GitHub Copilot extension, signed in with a GitHub account</span>
+                            </li>
+                            <li class="flex gap-3">
+                                <span class="text-orange-400 flex-shrink-0">•</span>
+                                <span>Created a public GitHub repository to hold the project</span>
+                            </li>
+                            <li class="flex gap-3">
+                                <span class="text-orange-400 flex-shrink-0">•</span>
+                                <span>Cloned the repository to a local folder and opened it in VS Code</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <h3 class="text-lg font-semibold text-white mb-3">2. Generated the site with AI</h3>
+                        <ul class="space-y-2 text-gray-300 pl-6">
+                            <li class="flex gap-3">
+                                <span class="text-sky-400 flex-shrink-0">•</span>
+                                <span>Wrote a detailed prompt describing the resume content, sections, and design preferences</span>
+                            </li>
+                            <li class="flex gap-3">
+                                <span class="text-sky-400 flex-shrink-0">•</span>
+                                <span>Used GitHub Copilot Chat to generate a single index.html file containing HTML, CSS, and JavaScript</span>
+                            </li>
+                            <li class="flex gap-3">
+                                <span class="text-sky-400 flex-shrink-0">•</span>
+                                <span>Previewed the result locally using the Live Preview extension, refining the design through follow-up prompts</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <h3 class="text-lg font-semibold text-white mb-3">3. Published the code</h3>
+                        <ul class="space-y-2 text-gray-300 pl-6">
+                            <li class="flex gap-3">
+                                <span class="text-purple-400 flex-shrink-0">•</span>
+                                <span>Staged and committed the finished file in VS Code's Source Control panel</span>
+                            </li>
+                            <li class="flex gap-3">
+                                <span class="text-purple-400 flex-shrink-0">•</span>
+                                <span>Pushed (synced) the commit to GitHub</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <h3 class="text-lg font-semibold text-white mb-3">4. Deployed with Vercel</h3>
+                        <ul class="space-y-2 text-gray-300 pl-6">
+                            <li class="flex gap-3">
+                                <span class="text-green-400 flex-shrink-0">•</span>
+                                <span>Signed in to Vercel with GitHub and imported the repository as a new project</span>
+                            </li>
+                            <li class="flex gap-3">
+                                <span class="text-green-400 flex-shrink-0">•</span>
+                                <span>Deployed with default settings, since the site is a single static HTML file requiring no build step</span>
+                            </li>
+                            <li class="flex gap-3">
+                                <span class="text-green-400 flex-shrink-0">•</span>
+                                <span>Received a free live URL in the format project-name.vercel.app</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <h3 class="text-lg font-semibold text-white mb-3">5. Maintenance and fixes</h3>
+                        <ul class="space-y-2 text-gray-300 pl-6">
+                            <li class="flex gap-3">
+                                <span class="text-blue-400 flex-shrink-0">•</span>
+                                <span>Resolved a broken folder link after moving the project directory by reopening the folder in VS Code</span>
+                            </li>
+                            <li class="flex gap-3">
+                                <span class="text-blue-400 flex-shrink-0">•</span>
+                                <span>Updated the page title tag so shared links display the correct name instead of a generic label</span>
+                            </li>
+                            <li class="flex gap-3">
+                                <span class="text-blue-400 flex-shrink-0">•</span>
+                                <span>Set up a continuous update routine: edit the file, commit, push, and Vercel redeploys automatically</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
             </section>
-        </div>
-    </main>
-</body>
-</html>
+            </div>
+        </main>
+    </body>
+    </html>

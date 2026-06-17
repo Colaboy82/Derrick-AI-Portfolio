@@ -1,0 +1,162 @@
+Derrick AI Portfolio - How the Website Was Built and Tools Used
+
+Document Purpose
+This document explains how the site was implemented with emphasis on technical execution, why each technical step was taken, and how the build can be repeated safely.
+
+1) High-Level Product, Formatting, and Content Steps
+This section is intentionally concise. It captures what was changed at the product/content level without over-indexing on visual details.
+
+1.1 Define section model
+- Sections were organized into Home, Experience, Projects, Education, Skills, and Contact.
+- Why: A stable section model makes navigation, anchor linking, and future content growth predictable.
+
+1.2 Establish content hierarchy
+- Professional content was prioritized first (role, impact, experience), followed by supporting sections and personal/contact details.
+- Why: Recruiters and hiring managers scan quickly; front-loading impact improves comprehension.
+
+1.3 Add project deep-dive flow
+- Project summary cards were added to the main page and linked to dedicated detail pages.
+- Why: Keeps homepage scannable while preserving space for detailed case studies.
+
+1.4 Normalize visual patterns
+- Cards, section spacing, and button styles were standardized.
+- Why: Consistent UI primitives reduce maintenance cost and avoid one-off style drift.
+
+2) Technical Implementation (Deeper Detail)
+
+2.1 Architecture decision: static multi-page site
+What was done
+- Implemented a static HTML/CSS/JS site with relative routing.
+- Kept all primary content in source-controlled HTML files.
+
+Why this step
+- Static architecture minimizes failure points, avoids server/runtime complexity, and is easy to deploy globally.
+
+2.2 File-based routing and link contract
+What was done
+- Main route: index.html
+- Project routes: projects/<slug>.html
+- Back links from project pages: ../index.html#projects
+- In-page nav uses section anchors (#experience, #projects, etc.)
+
+Why this step
+- Relative paths keep the site portable across static hosts and branch previews.
+- A strict link contract reduces broken links during refactors.
+
+2.3 Styling system split (utility + custom component rules)
+What was done
+- Used Tailwind via CDN for layout/typography utilities.
+- Added custom CSS classes for shared interaction behaviors.
+- Core interaction classes include card-hover plus scoped variants (experience-card, connect-card, project-card).
+
+Why this step
+- Utility classes accelerate baseline layout work.
+- Custom classes centralize advanced interaction logic so motion/hover tuning is not duplicated inline.
+
+2.4 Interaction engineering
+What was done
+- Implemented card interactions with transform, scale, shadow, border emphasis, and easing.
+- Used cubic-bezier easing for smoother acceleration/deceleration.
+- Added per-context hover tuning while preserving a shared interaction language.
+
+Why this step
+- Interaction parity across sections improves perceived quality.
+- Scoped variants allow stronger motion where needed without globally over-animating all cards.
+
+2.5 Asset/path hardening
+What was done
+- Corrected image filename mismatches and path casing issues.
+- Updated social/project icon handling (including SVG usage where appropriate).
+
+Why this step
+- Static hosts can be case-sensitive; path mismatches are a common production failure mode.
+
+2.6 Progressive page expansion
+What was done
+- Added project deep-dive pages under projects/.
+- Added clear return paths to the projects section on the main page.
+- Added WIP overlays to indicate in-progress case studies.
+
+Why this step
+- Progressive disclosure balances concise overview with optional depth.
+- Explicit return links preserve navigation continuity and reduce drop-off.
+
+2.7 Navigation and mobile behavior
+What was done
+- Implemented desktop anchor nav and mobile menu toggle using lightweight vanilla JavaScript.
+- Kept behavior minimal and deterministic.
+
+Why this step
+- Avoids framework/runtime overhead while still providing responsive usability.
+
+3) Toolchain and Execution Workflow
+
+3.1 Core technologies
+- HTML5 for structure.
+- Tailwind CSS (CDN) for utility styling.
+- Custom CSS for component-level interactions.
+- Vanilla JavaScript for menu interaction.
+
+Why this stack
+- Lowest operational complexity for a portfolio use case.
+- Fast iteration cycle with minimal dependency management.
+
+3.2 AI-assisted tooling
+What was used
+- GitHub Copilot chat agent in VS Code for iterative edits, refactors, and verification support.
+
+How it was used
+- Inspect current state.
+- Apply minimal targeted patches.
+- Re-verify selectors, paths, and links after each change.
+
+Why this approach
+- Reduces manual edit risk and keeps each change auditable and reversible.
+
+3.3 Verification workflow
+What was done
+- Searched for selectors/paths/anchors after edits.
+- Read back updated file segments to verify exact markup.
+- Validated project page existence and link targets.
+
+Why this step
+- Prevents silent regressions in static sites where runtime tests may be limited.
+
+4) Hosting and Deployment
+What was done
+- Hosted and deployed on Vercel.
+- Vercel serves static HTML/CSS/JS and asset files.
+- Release flow: update source, push changes, Vercel builds/deploys latest revision.
+
+Why this step
+- Vercel provides reliable static hosting, global delivery, and straightforward deployment ergonomics.
+
+5) Repeatable Build Procedure (Operational Checklist)
+1. Update content/sections in index.html first.
+2. Add or update project detail pages in projects/.
+3. Wire links both directions (card to page, page back to #projects).
+4. Align interactions using scoped card classes.
+5. Verify paths, anchors, and selectors with search/readback checks.
+6. Commit and deploy through Vercel.
+
+Why this procedure
+- Enforces order of operations that reduces navigation and linking defects.
+
+6) Current Constraints and Tradeoffs
+Benefits
+- Fast to iterate.
+- Minimal infrastructure surface area.
+- Simple deployment lifecycle.
+
+Tradeoffs
+- Manual content updates.
+- No CMS/editorial workflow.
+- No server-side analytics pipeline by default.
+
+7) Recommended Technical Next Steps
+- Add a lightweight content schema (JSON/Markdown) for project entries.
+- Introduce optional static-site generation if content volume grows.
+- Add analytics/event tracking for interaction insights.
+- Add automated link checking in CI to catch path regressions.
+
+End of Document
