@@ -3,61 +3,225 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Azure Hardware AI Agent | Derrick Mu</title>
+    <title>Voice Memo Cleaner Site | Derrick Mu</title>
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body class="bg-gradient-to-br from-slate-950 via-slate-900 to-slate-800 text-gray-100 min-h-screen">
-    <div class="pointer-events-none fixed inset-0 z-50 flex items-center justify-center overflow-hidden">
-        <span class="select-none text-[6rem] sm:text-[9rem] md:text-[13rem] font-black uppercase tracking-[0.35em] text-white/6 rotate-[-18deg]">WIP</span>
-    </div>
     <main class="px-4 sm:px-6 lg:px-8 py-16">
         <div class="max-w-5xl mx-auto">
-            <a href="../index.html#projects" class="inline-flex items-center gap-2 text-blue-300 hover:text-blue-200 transition mb-8">
+            <a href="../index.html#projects" class="inline-flex items-center gap-2 text-orange-300 hover:text-orange-200 transition mb-8">
                 <span aria-hidden="true">←</span>
                 <span>Back to projects</span>
             </a>
 
             <section class="mb-10 rounded-3xl border border-slate-700 bg-slate-800/60 p-8 md:p-12 shadow-2xl shadow-slate-950/40">
-                <div class="flex flex-wrap items-center gap-3 mb-6">
-                    <span class="rounded-full border border-blue-400/40 bg-blue-500/10 px-4 py-1 text-xs font-semibold uppercase tracking-[0.25em] text-blue-200">AI</span>
-                    <span class="text-sm text-gray-400">Customer Support · Knowledge Systems · Azure Infrastructure</span>
-                </div>
-                <h1 class="text-4xl md:text-5xl font-bold text-white mb-4">Azure Hardware AI Agent</h1>
-                <p class="text-lg md:text-xl text-gray-300 max-w-3xl leading-relaxed">A project centered on using AI to reduce friction in customer support for Azure hardware environments by combining faster issue resolution with stronger institutional knowledge capture.</p>
+                <h1 class="text-4xl md:text-5xl font-bold text-white mb-4">Voice Memo Cleaner Site</h1>
+                <p class="text-lg md:text-xl text-gray-300 max-w-3xl leading-relaxed">Built and documented a repeatable static-site implementation workflow focused on low operational complexity, reliable navigation contracts, and verification-first deployment.</p>
             </section>
 
-            <section class="grid md:grid-cols-3 gap-6 mb-10">
-                <div class="rounded-2xl border border-slate-700 bg-slate-800/50 p-6">
-                    <h2 class="text-sm font-semibold uppercase tracking-[0.2em] text-blue-300 mb-3">Problem</h2>
-                    <p class="text-gray-300 leading-relaxed">Support questions around operating and scaling on Azure hardware can be repetitive, technical, and difficult to route consistently across teams.</p>
-                </div>
-                <div class="rounded-2xl border border-slate-700 bg-slate-800/50 p-6">
-                    <h2 class="text-sm font-semibold uppercase tracking-[0.2em] text-blue-300 mb-3">Approach</h2>
-                    <p class="text-gray-300 leading-relaxed">Use an AI assistant to guide help requests, surface relevant context faster, and document issues in a reusable knowledge base.</p>
-                </div>
-                <div class="rounded-2xl border border-slate-700 bg-slate-800/50 p-6">
-                    <h2 class="text-sm font-semibold uppercase tracking-[0.2em] text-blue-300 mb-3">Outcome</h2>
-                    <p class="text-gray-300 leading-relaxed">Create a support loop that improves response quality over time instead of losing lessons learned across one-off tickets and conversations.</p>
+            <section class="rounded-3xl border border-slate-700 bg-slate-800/50 p-8 md:p-10 mb-10">
+                <h2 class="text-2xl font-bold text-white mb-6">Tools Used</h2>
+                <div class="overflow-x-auto">
+                    <table class="w-full text-left text-sm">
+                        <thead>
+                            <tr class="bg-slate-700/60 border border-slate-600">
+                                <th class="px-6 py-4 font-semibold text-white">Tool</th>
+                                <th class="px-6 py-4 font-semibold text-white">Role in the workflow</th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y divide-slate-600">
+                            <tr class="border-l border-r border-slate-600 hover:bg-slate-700/30 transition">
+                                <td class="px-6 py-4 font-semibold text-white">HTML5</td>
+                                <td class="px-6 py-4 text-gray-300">Defines page structure and section modules</td>
+                            </tr>
+                            <tr class="border-l border-r border-slate-600 hover:bg-slate-700/30 transition">
+                                <td class="px-6 py-4 font-semibold text-white">Tailwind CSS (CDN)</td>
+                                <td class="px-6 py-4 text-gray-300">Provides utility classes for layout and responsive behavior</td>
+                            </tr>
+                            <tr class="border-l border-r border-slate-600 hover:bg-slate-700/30 transition">
+                                <td class="px-6 py-4 font-semibold text-white">Custom CSS classes</td>
+                                <td class="px-6 py-4 text-gray-300">Applies consistent hover interactions and shared card styling</td>
+                            </tr>
+                            <tr class="border-l border-r border-slate-600 hover:bg-slate-700/30 transition">
+                                <td class="px-6 py-4 font-semibold text-white">Vanilla JavaScript</td>
+                                <td class="px-6 py-4 text-gray-300">Handles lightweight UI behavior such as mobile navigation toggle</td>
+                            </tr>
+                            <tr class="border-l border-r border-slate-600 hover:bg-slate-700/30 transition">
+                                <td class="px-6 py-4 font-semibold text-white">GitHub Copilot in VS Code</td>
+                                <td class="px-6 py-4 text-gray-300">Supports iterative edits, minimal patching, and quick verification loops</td>
+                            </tr>
+                            <tr class="border-l border-r border-slate-600 hover:bg-slate-700/30 transition">
+                                <td class="px-6 py-4 font-semibold text-white">Git + GitHub</td>
+                                <td class="px-6 py-4 text-gray-300">Tracks revisions and keeps the source-controlled release history</td>
+                            </tr>
+                            <tr class="border-l border-r border-slate-600 hover:bg-slate-700/30 transition">
+                                <td class="px-6 py-4 border-b border-slate-600 font-semibold text-white">Vercel</td>
+                                <td class="px-6 py-4 border-b border-slate-600 text-gray-300">Hosts and deploys the static site with straightforward release flow</td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </div>
             </section>
 
             <section class="rounded-3xl border border-slate-700 bg-slate-800/50 p-8 md:p-10 mb-10">
-                <h2 class="text-2xl font-bold text-white mb-6">Deep Dive Structure</h2>
-                <div class="grid md:grid-cols-2 gap-6 text-gray-300">
+                <h2 class="text-2xl font-bold text-white mb-6">Experience Gained</h2>
+                <div class="space-y-8">
                     <div>
-                        <h3 class="text-lg font-semibold text-white mb-2">What to expand here</h3>
-                        <p class="leading-relaxed">Use this page to add the full story: how requests entered the system, what the AI agent did well, what knowledge sources it depended on, and how you evaluated usefulness.</p>
+                        <h3 class="text-lg font-semibold text-orange-300 mb-3">Architecture and routing discipline</h3>
+                        <ul class="space-y-2 text-gray-300 pl-6">
+                            <li class="flex gap-3">
+                                <span class="text-orange-400 flex-shrink-0">•</span>
+                                <span>Applied a static multi-page architecture decision to reduce runtime complexity and failure points</span>
+                            </li>
+                            <li class="flex gap-3">
+                                <span class="text-orange-400 flex-shrink-0">•</span>
+                                <span>Maintained a strict link contract with relative routes and project back-links to preserve portability</span>
+                            </li>
+                            <li class="flex gap-3">
+                                <span class="text-orange-400 flex-shrink-0">•</span>
+                                <span>Used section anchors for predictable in-page navigation and faster content scanning</span>
+                            </li>
+                        </ul>
                     </div>
+
                     <div>
-                        <h3 class="text-lg font-semibold text-white mb-2">Good details to include</h3>
-                        <p class="leading-relaxed">You can document the customer workflow, prompt design, escalation logic, wiki-writing loop, and any product decisions you made around trust, speed, or documentation quality.</p>
+                        <h3 class="text-lg font-semibold text-sky-300 mb-3">UI and interaction engineering</h3>
+                        <ul class="space-y-2 text-gray-300 pl-6">
+                            <li class="flex gap-3">
+                                <span class="text-sky-400 flex-shrink-0">•</span>
+                                <span>Combined utility-first styling with scoped custom classes to avoid duplicated interaction logic</span>
+                            </li>
+                            <li class="flex gap-3">
+                                <span class="text-sky-400 flex-shrink-0">•</span>
+                                <span>Implemented consistent card behaviors using transform, scale, easing, border emphasis, and shadows</span>
+                            </li>
+                            <li class="flex gap-3">
+                                <span class="text-sky-400 flex-shrink-0">•</span>
+                                <span>Standardized visual primitives so spacing, cards, and controls stay maintainable as pages grow</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <h3 class="text-lg font-semibold text-green-300 mb-3">Verification and deployment workflow</h3>
+                        <ul class="space-y-2 text-gray-300 pl-6">
+                            <li class="flex gap-3">
+                                <span class="text-green-400 flex-shrink-0">•</span>
+                                <span>Used search/readback checks to validate selectors, paths, anchors, and project links after edits</span>
+                            </li>
+                            <li class="flex gap-3">
+                                <span class="text-green-400 flex-shrink-0">•</span>
+                                <span>Hardened asset and file naming assumptions to avoid case/path issues on static hosts</span>
+                            </li>
+                            <li class="flex gap-3">
+                                <span class="text-green-400 flex-shrink-0">•</span>
+                                <span>Followed a repeatable source-control to Vercel release path for predictable deployments</span>
+                            </li>
+                        </ul>
                     </div>
                 </div>
             </section>
 
-            <section class="rounded-3xl border border-dashed border-slate-600 bg-slate-900/40 p-8 md:p-10">
-                <h2 class="text-2xl font-bold text-white mb-4">Notes Placeholder</h2>
-                <p class="text-gray-400 leading-relaxed">This page is ready for a fuller write-up. Replace this section with screenshots, architecture notes, product tradeoffs, metrics, or lessons learned when you are ready to publish the deeper case study.</p>
+            <section class="rounded-3xl border border-slate-700 bg-slate-800/50 p-8 md:p-10 mb-10">
+                <h2 class="text-2xl font-bold text-white mb-6">Workflow Schema</h2>
+                <p class="text-gray-300 mb-6 leading-relaxed">The build process follows a linear static-site lifecycle with explicit verification checkpoints between implementation and deployment.</p>
+                <div class="overflow-x-auto">
+                    <table class="w-full text-left text-sm">
+                        <thead>
+                            <tr class="bg-slate-700/60 border border-slate-600">
+                                <th class="px-6 py-4 font-semibold text-white">Stage</th>
+                                <th class="px-6 py-4 font-semibold text-white">Role</th>
+                                <th class="px-6 py-4 font-semibold text-white">Output</th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y divide-slate-600">
+                            <tr class="border-l border-r border-slate-600 hover:bg-slate-700/30 transition">
+                                <td class="px-6 py-4 font-semibold text-white">1. Define</td>
+                                <td class="px-6 py-4 text-gray-300">Content strategist</td>
+                                <td class="px-6 py-4 text-gray-300">Section model and hierarchy for scannable portfolio content</td>
+                            </tr>
+                            <tr class="border-l border-r border-slate-600 hover:bg-slate-700/30 transition">
+                                <td class="px-6 py-4 font-semibold text-white">2. Build</td>
+                                <td class="px-6 py-4 text-gray-300">Frontend implementer</td>
+                                <td class="px-6 py-4 text-gray-300">Static HTML pages with utility and custom interaction layers</td>
+                            </tr>
+                            <tr class="border-l border-r border-slate-600 hover:bg-slate-700/30 transition">
+                                <td class="px-6 py-4 font-semibold text-white">3. Wire</td>
+                                <td class="px-6 py-4 text-gray-300">Navigation maintainer</td>
+                                <td class="px-6 py-4 text-gray-300">Relative routes, anchors, and project deep-dive connectivity</td>
+                            </tr>
+                            <tr class="border-l border-r border-slate-600 hover:bg-slate-700/30 transition">
+                                <td class="px-6 py-4 font-semibold text-white">4. Verify</td>
+                                <td class="px-6 py-4 text-gray-300">Quality reviewer</td>
+                                <td class="px-6 py-4 text-gray-300">Validated links, selectors, and path integrity</td>
+                            </tr>
+                            <tr class="border-l border-r border-slate-600 hover:bg-slate-700/30 transition">
+                                <td class="px-6 py-4 border-b border-slate-600 font-semibold text-white">5. Deploy</td>
+                                <td class="px-6 py-4 border-b border-slate-600 text-gray-300">Release owner</td>
+                                <td class="px-6 py-4 border-b border-slate-600 text-gray-300">Published static revision on Vercel</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <section class="rounded-3xl border border-slate-700 bg-slate-800/50 p-8 md:p-10">
+                <h2 class="text-2xl font-bold text-white mb-6">Steps Taken</h2>
+                <div class="space-y-8">
+                    <div>
+                        <h3 class="text-lg font-semibold text-white mb-3">1. Structured the product and content model</h3>
+                        <ul class="space-y-2 text-gray-300 pl-6">
+                            <li class="flex gap-3">
+                                <span class="text-orange-400 flex-shrink-0">•</span>
+                                <span>Organized core sections and defined predictable navigation targets</span>
+                            </li>
+                            <li class="flex gap-3">
+                                <span class="text-orange-400 flex-shrink-0">•</span>
+                                <span>Prioritized high-impact professional information before supporting details</span>
+                            </li>
+                            <li class="flex gap-3">
+                                <span class="text-orange-400 flex-shrink-0">•</span>
+                                <span>Introduced project deep-dive pages to balance homepage brevity and depth</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <h3 class="text-lg font-semibold text-white mb-3">2. Implemented the static technical foundation</h3>
+                        <ul class="space-y-2 text-gray-300 pl-6">
+                            <li class="flex gap-3">
+                                <span class="text-sky-400 flex-shrink-0">•</span>
+                                <span>Built with static HTML/CSS/JS and relative file-based routing for portability</span>
+                            </li>
+                            <li class="flex gap-3">
+                                <span class="text-sky-400 flex-shrink-0">•</span>
+                                <span>Layered Tailwind utilities with custom component rules for interaction consistency</span>
+                            </li>
+                            <li class="flex gap-3">
+                                <span class="text-sky-400 flex-shrink-0">•</span>
+                                <span>Expanded project pages progressively while preserving shared UI patterns</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <h3 class="text-lg font-semibold text-white mb-3">3. Verified links and released</h3>
+                        <ul class="space-y-2 text-gray-300 pl-6">
+                            <li class="flex gap-3">
+                                <span class="text-green-400 flex-shrink-0">•</span>
+                                <span>Checked path, anchor, and selector correctness after every targeted edit</span>
+                            </li>
+                            <li class="flex gap-3">
+                                <span class="text-green-400 flex-shrink-0">•</span>
+                                <span>Confirmed each project card and deep-dive route resolves to a valid page</span>
+                            </li>
+                            <li class="flex gap-3">
+                                <span class="text-green-400 flex-shrink-0">•</span>
+                                <span>Published and maintained the site through a simple GitHub-to-Vercel deployment lifecycle</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
             </section>
         </div>
     </main>
