@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Voice Memo Cleaner Site | Derrick Mu</title>
+    <title>Voice Memo Transcription App | Derrick Mu</title>
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body class="bg-gradient-to-br from-slate-950 via-slate-900 to-slate-800 text-gray-100 min-h-screen">
@@ -15,8 +15,9 @@
             </a>
 
             <section class="mb-10 rounded-3xl border border-slate-700 bg-slate-800/60 p-8 md:p-12 shadow-2xl shadow-slate-950/40">
-                <h1 class="text-4xl md:text-5xl font-bold text-white mb-4">Voice Memo Cleaner Site</h1>
-                <p class="text-lg md:text-xl text-gray-300 max-w-3xl leading-relaxed">Built and documented a repeatable static-site implementation workflow focused on low operational complexity, reliable navigation contracts, and verification-first deployment.</p>
+                <h1 class="text-4xl md:text-5xl font-bold text-white mb-4">Voice Memo Transcription App</h1>
+                <p class="text-lg text-gray-300 mb-3">Live site: voice-memo-cleaner.vercel.app</p>
+                <p class="text-lg md:text-xl text-gray-300 max-w-4xl leading-relaxed">Built a full-stack web app that takes a voice memo, transcribes it to text using AI speech recognition, removes filler words and verbal tics, and automatically generates a structured summary, key points, and action items — all deployed to a live URL at no cost.</p>
             </section>
 
             <section class="rounded-3xl border border-slate-700 bg-slate-800/50 p-8 md:p-10 mb-10">
@@ -31,32 +32,36 @@
                         </thead>
                         <tbody class="divide-y divide-slate-600">
                             <tr class="border-l border-r border-slate-600 hover:bg-slate-700/30 transition">
-                                <td class="px-6 py-4 font-semibold text-white">HTML5</td>
-                                <td class="px-6 py-4 text-gray-300">Defines page structure and section modules</td>
+                                <td class="px-6 py-4 font-semibold text-white">VS Code</td>
+                                <td class="px-6 py-4 text-gray-300">Code editor used to write, run, and debug the entire project</td>
                             </tr>
                             <tr class="border-l border-r border-slate-600 hover:bg-slate-700/30 transition">
-                                <td class="px-6 py-4 font-semibold text-white">Tailwind CSS (CDN)</td>
-                                <td class="px-6 py-4 text-gray-300">Provides utility classes for layout and responsive behavior</td>
+                                <td class="px-6 py-4 font-semibold text-white">Next.js 14</td>
+                                <td class="px-6 py-4 text-gray-300">Full-stack React framework that handles both the frontend UI and backend API routes in one codebase</td>
                             </tr>
                             <tr class="border-l border-r border-slate-600 hover:bg-slate-700/30 transition">
-                                <td class="px-6 py-4 font-semibold text-white">Custom CSS classes</td>
-                                <td class="px-6 py-4 text-gray-300">Applies consistent hover interactions and shared card styling</td>
+                                <td class="px-6 py-4 font-semibold text-white">TypeScript</td>
+                                <td class="px-6 py-4 text-gray-300">Typed superset of JavaScript that catches bugs at compile time before the code runs</td>
                             </tr>
                             <tr class="border-l border-r border-slate-600 hover:bg-slate-700/30 transition">
-                                <td class="px-6 py-4 font-semibold text-white">Vanilla JavaScript</td>
-                                <td class="px-6 py-4 text-gray-300">Handles lightweight UI behavior such as mobile navigation toggle</td>
+                                <td class="px-6 py-4 font-semibold text-white">Groq</td>
+                                <td class="px-6 py-4 text-gray-300">Free AI inference platform that hosts OpenAI's Whisper speech-to-text model for audio transcription</td>
                             </tr>
                             <tr class="border-l border-r border-slate-600 hover:bg-slate-700/30 transition">
-                                <td class="px-6 py-4 font-semibold text-white">GitHub Copilot in VS Code</td>
-                                <td class="px-6 py-4 text-gray-300">Supports iterative edits, minimal patching, and quick verification loops</td>
+                                <td class="px-6 py-4 font-semibold text-white">Google Gemini</td>
+                                <td class="px-6 py-4 text-gray-300">Free large language model API used to remove filler words and generate structured notes from transcripts</td>
                             </tr>
                             <tr class="border-l border-r border-slate-600 hover:bg-slate-700/30 transition">
-                                <td class="px-6 py-4 font-semibold text-white">Git + GitHub</td>
-                                <td class="px-6 py-4 text-gray-300">Tracks revisions and keeps the source-controlled release history</td>
+                                <td class="px-6 py-4 font-semibold text-white">Tailwind CSS</td>
+                                <td class="px-6 py-4 text-gray-300">Utility-first CSS framework used to style the UI with class names instead of separate stylesheets</td>
                             </tr>
                             <tr class="border-l border-r border-slate-600 hover:bg-slate-700/30 transition">
                                 <td class="px-6 py-4 border-b border-slate-600 font-semibold text-white">Vercel</td>
-                                <td class="px-6 py-4 border-b border-slate-600 text-gray-300">Hosts and deploys the static site with straightforward release flow</td>
+                                <td class="px-6 py-4 border-b border-slate-600 text-gray-300">Free hosting platform that deploys the app automatically and runs the API routes as serverless functions</td>
+                            </tr>
+                            <tr class="border-l border-r border-slate-600 hover:bg-slate-700/30 transition">
+                                <td class="px-6 py-4 border-b border-slate-600 font-semibold text-white">Git / GitHub</td>
+                                <td class="px-6 py-4 border-b border-slate-600 text-gray-300">Version control and cloud repository used to store the project and connect to Vercel for deployment</td>
                             </tr>
                         </tbody>
                     </table>
@@ -67,55 +72,95 @@
                 <h2 class="text-2xl font-bold text-white mb-6">Experience Gained</h2>
                 <div class="space-y-8">
                     <div>
-                        <h3 class="text-lg font-semibold text-orange-300 mb-3">Architecture and routing discipline</h3>
+                        <h3 class="text-lg font-semibold text-orange-300 mb-3">AI API integration</h3>
                         <ul class="space-y-2 text-gray-300 pl-6">
                             <li class="flex gap-3">
                                 <span class="text-orange-400 flex-shrink-0">•</span>
-                                <span>Applied a static multi-page architecture decision to reduce runtime complexity and failure points</span>
+                                <span>Calling a speech-to-text API (Groq Whisper) with a real audio file over HTTP using multipart/form-data encoding</span>
                             </li>
                             <li class="flex gap-3">
                                 <span class="text-orange-400 flex-shrink-0">•</span>
-                                <span>Maintained a strict link contract with relative routes and project back-links to preserve portability</span>
+                                <span>Calling a large language model API (Google Gemini) with a natural language prompt and parsing the response</span>
                             </li>
                             <li class="flex gap-3">
                                 <span class="text-orange-400 flex-shrink-0">•</span>
-                                <span>Used section anchors for predictable in-page navigation and faster content scanning</span>
+                                <span>Running two independent API calls in parallel using Promise.all() to cut total processing time in half</span>
+                            </li>
+                            <li class="flex gap-3">
+                                <span class="text-orange-400 flex-shrink-0">•</span>
+                                <span>Diagnosing and fixing a model availability error by switching from whisper-large-v3 to whisper-large-v3-turbo on the free tier</span>
                             </li>
                         </ul>
                     </div>
 
                     <div>
-                        <h3 class="text-lg font-semibold text-sky-300 mb-3">UI and interaction engineering</h3>
+                        <h3 class="text-lg font-semibold text-sky-300 mb-3">Prompt engineering</h3>
                         <ul class="space-y-2 text-gray-300 pl-6">
                             <li class="flex gap-3">
                                 <span class="text-sky-400 flex-shrink-0">•</span>
-                                <span>Combined utility-first styling with scoped custom classes to avoid duplicated interaction logic</span>
+                                <span>Writing precise prompts that produce reliable, consistent output from a language model rather than vague or unpredictable responses</span>
                             </li>
                             <li class="flex gap-3">
                                 <span class="text-sky-400 flex-shrink-0">•</span>
-                                <span>Implemented consistent card behaviors using transform, scale, easing, border emphasis, and shadows</span>
+                                <span>Asking the model to return structured JSON by including the exact field names and shape in the prompt</span>
                             </li>
                             <li class="flex gap-3">
                                 <span class="text-sky-400 flex-shrink-0">•</span>
-                                <span>Standardized visual primitives so spacing, cards, and controls stay maintainable as pages grow</span>
+                                <span>Handling edge cases where the model wraps JSON output in markdown code fences despite being instructed not to</span>
                             </li>
                         </ul>
                     </div>
 
                     <div>
-                        <h3 class="text-lg font-semibold text-green-300 mb-3">Verification and deployment workflow</h3>
+                        <h3 class="text-lg font-semibold text-green-300 mb-3">Full-stack Next.js development</h3>
                         <ul class="space-y-2 text-gray-300 pl-6">
                             <li class="flex gap-3">
                                 <span class="text-green-400 flex-shrink-0">•</span>
-                                <span>Used search/readback checks to validate selectors, paths, anchors, and project links after edits</span>
+                                <span>Building serverless API routes using the Next.js App Router, where each file in app/api/ becomes a live endpoint automatically</span>
                             </li>
                             <li class="flex gap-3">
                                 <span class="text-green-400 flex-shrink-0">•</span>
-                                <span>Hardened asset and file naming assumptions to avoid case/path issues on static hosts</span>
+                                <span>Separating server-side code (API calls with secret keys) from client-side code (the browser UI) to keep credentials secure</span>
                             </li>
                             <li class="flex gap-3">
                                 <span class="text-green-400 flex-shrink-0">•</span>
-                                <span>Followed a repeatable source-control to Vercel release path for predictable deployments</span>
+                                <span>Managing application state in React using useState and useRef hooks to drive the UI through loading, processing, and done stages</span>
+                            </li>
+                            <li class="flex gap-3">
+                                <span class="text-green-400 flex-shrink-0">•</span>
+                                <span>Sending files from the browser to a server using FormData and the fetch API</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <h3 class="text-lg font-semibold text-purple-300 mb-3">Security and environment management</h3>
+                        <ul class="space-y-2 text-gray-300 pl-6">
+                            <li class="flex gap-3">
+                                <span class="text-purple-400 flex-shrink-0">•</span>
+                                <span>Storing API keys in .env.local so they are never included in the codebase or sent to the browser</span>
+                            </li>
+                            <li class="flex gap-3">
+                                <span class="text-purple-400 flex-shrink-0">•</span>
+                                <span>Adding environment variables in the Vercel dashboard so the deployed app can access credentials securely in production</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <h3 class="text-lg font-semibold text-amber-300 mb-3">Deployment and troubleshooting</h3>
+                        <ul class="space-y-2 text-gray-300 pl-6">
+                            <li class="flex gap-3">
+                                <span class="text-amber-400 flex-shrink-0">•</span>
+                                <span>Deploying a Next.js app to Vercel using the CLI and configuring environment variables in the project dashboard</span>
+                            </li>
+                            <li class="flex gap-3">
+                                <span class="text-amber-400 flex-shrink-0">•</span>
+                                <span>Reading Vercel build logs to diagnose deployment failures and trace errors back to their root cause</span>
+                            </li>
+                            <li class="flex gap-3">
+                                <span class="text-amber-400 flex-shrink-0">•</span>
+                                <span>Understanding how Vercel converts Next.js API route files into serverless functions that run on demand</span>
                             </li>
                         </ul>
                     </div>
@@ -124,7 +169,7 @@
 
             <section class="rounded-3xl border border-slate-700 bg-slate-800/50 p-8 md:p-10 mb-10">
                 <h2 class="text-2xl font-bold text-white mb-6">Workflow Schema</h2>
-                <p class="text-gray-300 mb-6 leading-relaxed">The build process follows a linear static-site lifecycle with explicit verification checkpoints between implementation and deployment.</p>
+                <p class="text-gray-300 mb-6 leading-relaxed">The app follows a linear request pipeline. Each stage feeds directly into the next. Stages 3 and 4 run in parallel.</p>
                 <div class="overflow-x-auto">
                     <table class="w-full text-left text-sm">
                         <thead>
@@ -136,29 +181,29 @@
                         </thead>
                         <tbody class="divide-y divide-slate-600">
                             <tr class="border-l border-r border-slate-600 hover:bg-slate-700/30 transition">
-                                <td class="px-6 py-4 font-semibold text-white">1. Define</td>
-                                <td class="px-6 py-4 text-gray-300">Content strategist</td>
-                                <td class="px-6 py-4 text-gray-300">Section model and hierarchy for scannable portfolio content</td>
+                                <td class="px-6 py-4 font-semibold text-white">1. Upload</td>
+                                <td class="px-6 py-4 text-gray-300">File receiver</td>
+                                <td class="px-6 py-4 text-gray-300">Audio file (.mp3, .m4a, .wav, .webm) held in browser memory</td>
                             </tr>
                             <tr class="border-l border-r border-slate-600 hover:bg-slate-700/30 transition">
-                                <td class="px-6 py-4 font-semibold text-white">2. Build</td>
-                                <td class="px-6 py-4 text-gray-300">Frontend implementer</td>
-                                <td class="px-6 py-4 text-gray-300">Static HTML pages with utility and custom interaction layers</td>
+                                <td class="px-6 py-4 font-semibold text-white">2. Transcribe</td>
+                                <td class="px-6 py-4 text-gray-300">Speech-to-text</td>
+                                <td class="px-6 py-4 text-gray-300">Raw transcript text returned from Groq Whisper API</td>
                             </tr>
                             <tr class="border-l border-r border-slate-600 hover:bg-slate-700/30 transition">
-                                <td class="px-6 py-4 font-semibold text-white">3. Wire</td>
-                                <td class="px-6 py-4 text-gray-300">Navigation maintainer</td>
-                                <td class="px-6 py-4 text-gray-300">Relative routes, anchors, and project deep-dive connectivity</td>
+                                <td class="px-6 py-4 font-semibold text-white">3. Clean</td>
+                                <td class="px-6 py-4 text-gray-300">Filler word removal</td>
+                                <td class="px-6 py-4 text-gray-300">Polished transcript with um, uh, like, you know removed — runs in parallel with stage 4</td>
                             </tr>
                             <tr class="border-l border-r border-slate-600 hover:bg-slate-700/30 transition">
-                                <td class="px-6 py-4 font-semibold text-white">4. Verify</td>
-                                <td class="px-6 py-4 text-gray-300">Quality reviewer</td>
-                                <td class="px-6 py-4 text-gray-300">Validated links, selectors, and path integrity</td>
+                                <td class="px-6 py-4 font-semibold text-white">4. Notes</td>
+                                <td class="px-6 py-4 text-gray-300">Note generation</td>
+                                <td class="px-6 py-4 text-gray-300">JSON object with title, summary, key points, and action items — runs in parallel with stage 3</td>
                             </tr>
                             <tr class="border-l border-r border-slate-600 hover:bg-slate-700/30 transition">
-                                <td class="px-6 py-4 border-b border-slate-600 font-semibold text-white">5. Deploy</td>
-                                <td class="px-6 py-4 border-b border-slate-600 text-gray-300">Release owner</td>
-                                <td class="px-6 py-4 border-b border-slate-600 text-gray-300">Published static revision on Vercel</td>
+                                <td class="px-6 py-4 border-b border-slate-600 font-semibold text-white">5. Display</td>
+                                <td class="px-6 py-4 border-b border-slate-600 text-gray-300">UI renderer</td>
+                                <td class="px-6 py-4 border-b border-slate-600 text-gray-300">Four-tab output panel: Cleaned, Summary, Key Points, Action Items</td>
                             </tr>
                         </tbody>
                     </table>
@@ -169,55 +214,151 @@
                 <h2 class="text-2xl font-bold text-white mb-6">Steps Taken</h2>
                 <div class="space-y-8">
                     <div>
-                        <h3 class="text-lg font-semibold text-white mb-3">1. Structured the product and content model</h3>
+                        <h3 class="text-lg font-semibold text-white mb-3">1. Set up the project</h3>
                         <ul class="space-y-2 text-gray-300 pl-6">
                             <li class="flex gap-3">
                                 <span class="text-orange-400 flex-shrink-0">•</span>
-                                <span>Organized core sections and defined predictable navigation targets</span>
+                                <span>Ran npx create-next-app@latest with TypeScript and Tailwind CSS flags to scaffold the project in VS Code</span>
                             </li>
                             <li class="flex gap-3">
                                 <span class="text-orange-400 flex-shrink-0">•</span>
-                                <span>Prioritized high-impact professional information before supporting details</span>
+                                <span>Installed the Groq SDK and Google Generative AI SDK using npm</span>
                             </li>
                             <li class="flex gap-3">
                                 <span class="text-orange-400 flex-shrink-0">•</span>
-                                <span>Introduced project deep-dive pages to balance homepage brevity and depth</span>
+                                <span>Created a .env.local file in the project root to store API keys securely outside the codebase</span>
+                            </li>
+                            <li class="flex gap-3">
+                                <span class="text-orange-400 flex-shrink-0">•</span>
+                                <span>Signed up for a free Groq account at console.groq.com and a free Gemini key at aistudio.google.com — no credit card required for either</span>
                             </li>
                         </ul>
                     </div>
 
                     <div>
-                        <h3 class="text-lg font-semibold text-white mb-3">2. Implemented the static technical foundation</h3>
+                        <h3 class="text-lg font-semibold text-white mb-3">2. Built the transcription API route</h3>
                         <ul class="space-y-2 text-gray-300 pl-6">
                             <li class="flex gap-3">
                                 <span class="text-sky-400 flex-shrink-0">•</span>
-                                <span>Built with static HTML/CSS/JS and relative file-based routing for portability</span>
+                                <span>Created app/api/transcribe/route.ts as a Next.js serverless function that accepts POST requests</span>
                             </li>
                             <li class="flex gap-3">
                                 <span class="text-sky-400 flex-shrink-0">•</span>
-                                <span>Layered Tailwind utilities with custom component rules for interaction consistency</span>
+                                <span>Used req.formData() to unpack the uploaded audio file from the incoming HTTP request</span>
                             </li>
                             <li class="flex gap-3">
                                 <span class="text-sky-400 flex-shrink-0">•</span>
-                                <span>Expanded project pages progressively while preserving shared UI patterns</span>
+                                <span>Passed the file to the Groq SDK using groq.audio.transcriptions.create() with the whisper-large-v3-turbo model</span>
+                            </li>
+                            <li class="flex gap-3">
+                                <span class="text-sky-400 flex-shrink-0">•</span>
+                                <span>Returned the raw transcript text as a JSON response to the frontend</span>
                             </li>
                         </ul>
                     </div>
 
                     <div>
-                        <h3 class="text-lg font-semibold text-white mb-3">3. Verified links and released</h3>
+                        <h3 class="text-lg font-semibold text-white mb-3">3. Built the filler-word removal route</h3>
                         <ul class="space-y-2 text-gray-300 pl-6">
                             <li class="flex gap-3">
                                 <span class="text-green-400 flex-shrink-0">•</span>
-                                <span>Checked path, anchor, and selector correctness after every targeted edit</span>
+                                <span>Created app/api/clean/route.ts to receive the raw transcript as JSON and send it to Gemini</span>
                             </li>
                             <li class="flex gap-3">
                                 <span class="text-green-400 flex-shrink-0">•</span>
-                                <span>Confirmed each project card and deep-dive route resolves to a valid page</span>
+                                <span>Wrote a detailed prompt that names specific filler words to remove, defines false starts and stutters with examples, and instructs the model not to rephrase or add new content</span>
                             </li>
                             <li class="flex gap-3">
                                 <span class="text-green-400 flex-shrink-0">•</span>
-                                <span>Published and maintained the site through a simple GitHub-to-Vercel deployment lifecycle</span>
+                                <span>Called model.generateContent() from the Google Generative AI SDK and extracted the plain text response</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <h3 class="text-lg font-semibold text-white mb-3">4. Built the notes generation route</h3>
+                        <ul class="space-y-2 text-gray-300 pl-6">
+                            <li class="flex gap-3">
+                                <span class="text-blue-400 flex-shrink-0">•</span>
+                                <span>Created app/api/notes/route.ts to receive the same raw transcript and return structured notes</span>
+                            </li>
+                            <li class="flex gap-3">
+                                <span class="text-blue-400 flex-shrink-0">•</span>
+                                <span>Wrote a prompt that instructs Gemini to return a JSON object with four fields: title, summary, keyPoints (array), and actionItems (array)</span>
+                            </li>
+                            <li class="flex gap-3">
+                                <span class="text-blue-400 flex-shrink-0">•</span>
+                                <span>Added defensive cleanup to strip markdown code fences from the response before calling JSON.parse()</span>
+                            </li>
+                            <li class="flex gap-3">
+                                <span class="text-blue-400 flex-shrink-0">•</span>
+                                <span>Wrapped JSON.parse() in a try/catch block so a malformed model response returns a 500 error instead of crashing the app</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <h3 class="text-lg font-semibold text-white mb-3">5. Built the frontend</h3>
+                        <ul class="space-y-2 text-gray-300 pl-6">
+                            <li class="flex gap-3">
+                                <span class="text-indigo-400 flex-shrink-0">•</span>
+                                <span>Built the main page in app/page.tsx as a client-side React component using the 'use client' directive</span>
+                            </li>
+                            <li class="flex gap-3">
+                                <span class="text-indigo-400 flex-shrink-0">•</span>
+                                <span>Added a drag-and-drop upload zone that triggers a hidden file input when clicked and handles dropped files via onDrop</span>
+                            </li>
+                            <li class="flex gap-3">
+                                <span class="text-indigo-400 flex-shrink-0">•</span>
+                                <span>Called /api/transcribe first, then used Promise.all() to call /api/clean and /api/notes simultaneously</span>
+                            </li>
+                            <li class="flex gap-3">
+                                <span class="text-indigo-400 flex-shrink-0">•</span>
+                                <span>Rendered results in a four-tab panel (Cleaned, Summary, Key Points, Action Items) with a collapsible raw transcript at the bottom</span>
+                            </li>
+                            <li class="flex gap-3">
+                                <span class="text-indigo-400 flex-shrink-0">•</span>
+                                <span>Added a copy-to-clipboard button on the cleaned transcript tab and checkbox inputs on the action items tab</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <h3 class="text-lg font-semibold text-white mb-3">6. Deployed to Vercel</h3>
+                        <ul class="space-y-2 text-gray-300 pl-6">
+                            <li class="flex gap-3">
+                                <span class="text-teal-400 flex-shrink-0">•</span>
+                                <span>Initialised a Git repository, committed the project, and pushed to GitHub</span>
+                            </li>
+                            <li class="flex gap-3">
+                                <span class="text-teal-400 flex-shrink-0">•</span>
+                                <span>Installed the Vercel CLI and ran vercel to link the project to a Vercel account</span>
+                            </li>
+                            <li class="flex gap-3">
+                                <span class="text-teal-400 flex-shrink-0">•</span>
+                                <span>Added GROQ_API_KEY and GEMINI_API_KEY in the Vercel dashboard under Settings -> Environment Variables</span>
+                            </li>
+                            <li class="flex gap-3">
+                                <span class="text-teal-400 flex-shrink-0">•</span>
+                                <span>Ran vercel --prod to deploy the production build and received a live URL at voice-memo-cleaner.vercel.app</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <h3 class="text-lg font-semibold text-white mb-3">7. Debugging and fixes</h3>
+                        <ul class="space-y-2 text-gray-300 pl-6">
+                            <li class="flex gap-3">
+                                <span class="text-rose-400 flex-shrink-0">•</span>
+                                <span>Encountered a subscription error on Groq: resolved by switching from whisper-large-v3 to whisper-large-v3-turbo, which is available on the free tier</span>
+                            </li>
+                            <li class="flex gap-3">
+                                <span class="text-rose-400 flex-shrink-0">•</span>
+                                <span>Encountered Vercel deployment failures: diagnosed by reading build logs in the Vercel dashboard and confirming environment variables were correctly set</span>
+                            </li>
+                            <li class="flex gap-3">
+                                <span class="text-rose-400 flex-shrink-0">•</span>
+                                <span>Added defensive JSON cleanup after discovering Gemini occasionally wraps output in markdown code fences despite prompt instructions</span>
                             </li>
                         </ul>
                     </div>
